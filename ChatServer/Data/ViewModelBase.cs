@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChatServer.Data
 {
-    public class ViewModelBase : INotifyPropertyChanged
+    public abstract class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged = (s, e) => { };
         public void OnPropertyChanged(string name)

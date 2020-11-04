@@ -140,7 +140,7 @@ namespace ChatServer
                                 temp.Name = item.Name;
                                 temp.PersonId = item.PersonId;
                                 temp.Pic = item.Pic;
-                                temp.PicturePath = @"C:\Users\X\Downloads\ChatImage" + item.PersonId + ".jpg"; 
+                                temp.PicturePath = @"C:\Users\X\Downloads\ChatData\ChatImage" + item.PersonId + ".jpg"; 
 
                                 jsonContainer.Persons.Add(temp);
                             }
@@ -199,7 +199,7 @@ namespace ChatServer
                 temp.Name = item.Name;
                 temp.PersonId = item.PersonId;
                 temp.Pic = item.Pic;
-                temp.PicturePath = @"C:\Users\X\Downloads\ChatImage" + item.PersonId + ".jpg";
+                temp.PicturePath = @"C:\Users\X\Downloads\ChatData\ChatImage" + item.PersonId + ".jpg";
 
                 jsonContainer.Persons.Add(temp);
             }

@@ -1,0 +1,9 @@
+C:\Users\X\Source\Repos\ChatServer\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\Users\X\Source\Repos\ChatServer\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\X\Source\Repos\ChatServer\Domain\bin\Debug\Domain.dll
+C:\Users\X\Source\Repos\ChatServer\Domain\bin\Debug\Domain.pdb
+C:\Users\X\Source\Repos\ChatServer\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\X\Source\Repos\ChatServer\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\X\Source\Repos\ChatServer\Domain\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\X\Source\Repos\ChatServer\Domain\obj\Debug\Domain.dll
+C:\Users\X\Source\Repos\ChatServer\Domain\obj\Debug\Domain.pdb

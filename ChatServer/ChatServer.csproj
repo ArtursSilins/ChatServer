@@ -66,23 +66,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Connect.cs" />
-    <Compile Include="Converters\ConvertData.cs" />
-    <Compile Include="Converters\MessageEncryption.cs" />
-    <Compile Include="Data\AllMessages.cs" />
-    <Compile Include="Data\CurrentPersonId.cs" />
-    <Compile Include="Data\DisconnectContent.cs" />
-    <Compile Include="Data\JsonContainer.cs" />
-    <Compile Include="Data\MessageContent.cs" />
-    <Compile Include="Data\Person.cs" />
-    <Compile Include="Data\SenderReceiver.cs" />
-    <Compile Include="Data\UIViewModel.cs" />
-    <Compile Include="Data\UsersOnline.cs" />
-    <Compile Include="Data\ViewModelBase.cs" />
-    <Compile Include="Interfaces\IJsonContainer.cs" />
-    <Compile Include="Interfaces\IMessageContent.cs" />
-    <Compile Include="Interfaces\IPerson.cs" />
-    <Compile Include="Interfaces\IUIViewModel.cs" />
+    <Compile Include="DependencySolver.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -115,6 +99,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{2bcbb4e5-e8fc-484a-81f1-0c9d6c8090b2}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{09dab307-d5d6-4797-bf5a-6ff6f56cb885}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

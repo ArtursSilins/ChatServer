@@ -18,7 +18,7 @@ namespace Domain
         public static ManualResetEvent ReceiveDone = new ManualResetEvent(false);
         public bool FirstTime { get; set; }
 
-        private bool LastRecursion { get; set; }
+        private bool NotLastRecursion { get; set; }
 
         public Connect(int personId, IPerson person, IJsonContainer jsonContainer, IMessageContent messageContent, IUIViewModel uIViewModel)
         {
@@ -36,24 +36,27 @@ namespace Domain
                 StateObject state = (StateObject)ar.AsyncState;
                 Socket handler = state.workSocket;
  
-                int read = handler.EndReceive(ar);
+                int byteCount = handler.EndReceive(ar);
 
-                if (read == 1024)
-                    LastRecursion = true;
 
-                if (read == 0)
+                // If byteCount is 1024 (Max BufferSize = 1024) then there is more to read
+
+                if (byteCount == 1024)
+                    NotLastRecursion = true;
+
+                if (byteCount == 0)
                 {
                     // Add all disconection stuff !!!!!
 
                     return;
                 }
 
-                state.sb.Append(Encoding.UTF8.GetString(state.buffer, 0, read));
+                state.sb.Append(Encoding.UTF8.GetString(state.buffer, 0, byteCount));
 
                 handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,
               new AsyncCallback(ReadCallback), state);
 
-                if(LastRecursion == false && handler.Available == 0)
+                if(NotLastRecursion == false && handler.Available == 0)
                 {
 
                     if (state.sb.Length > 1)
@@ -65,7 +68,7 @@ namespace Domain
                 }
                 else
                 {
-                    LastRecursion = false;
+                    NotLastRecursion = false;
                 }
                
             }

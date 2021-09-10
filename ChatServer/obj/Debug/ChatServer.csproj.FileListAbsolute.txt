@@ -19,3 +19,24 @@ C:\Users\X\Source\Repos\ChatServer\ChatServer\bin\Debug\Domain.dll
 C:\Users\X\Source\Repos\ChatServer\ChatServer\bin\Debug\Domain.pdb
 C:\Users\X\Source\Repos\ChatServer\ChatServer\bin\Debug\Repository.dll
 C:\Users\X\Source\Repos\ChatServer\ChatServer\bin\Debug\Repository.pdb
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\bin\Debug\ChatServer.exe.config
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\bin\Debug\ChatServer.exe
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\bin\Debug\ChatServer.pdb
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\bin\Debug\Domain.dll
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\bin\Debug\Repository.dll
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\bin\Debug\Domain.pdb
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\bin\Debug\Repository.pdb
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\obj\Debug\ChatServer.csprojAssemblyReference.cache
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\obj\Debug\MainWindow.baml
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\obj\Debug\MainWindow.g.cs
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\obj\Debug\App.g.cs
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\obj\Debug\ChatServer_MarkupCompile.cache
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\obj\Debug\ChatServer.g.resources
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\obj\Debug\ChatServer.Properties.Resources.resources
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\obj\Debug\ChatServer.csproj.GenerateResource.cache
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\obj\Debug\ChatServer.csproj.CoreCompileInputs.cache
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\obj\Debug\ChatServer.csproj.CopyComplete
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\obj\Debug\ChatServer.exe
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\obj\Debug\ChatServer.pdb

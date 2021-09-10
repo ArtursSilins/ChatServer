@@ -9,3 +9,14 @@ C:\Users\X\Source\Repos\ChatServer\Repository\bin\Debug\Newtonsoft.Json.dll
 C:\Users\X\Source\Repos\ChatServer\Repository\bin\Debug\Domain.pdb
 C:\Users\X\Source\Repos\ChatServer\Repository\bin\Debug\Newtonsoft.Json.xml
 C:\Users\X\Source\Repos\ChatServer\Repository\obj\Debug\Repository.csproj.CopyComplete
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\bin\Debug\Repository.dll
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\bin\Debug\Repository.pdb
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\bin\Debug\Domain.dll
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\bin\Debug\Newtonsoft.Json.dll
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\bin\Debug\Domain.pdb
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\bin\Debug\Newtonsoft.Json.xml
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\obj\Debug\Repository.csprojAssemblyReference.cache
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\obj\Debug\Repository.csproj.CopyComplete
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\obj\Debug\Repository.dll
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\obj\Debug\Repository.pdb

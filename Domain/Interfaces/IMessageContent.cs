@@ -1,4 +1,6 @@
 ﻿
+using Domain.Data;
+
 namespace Domain.Interfaces
 {
     public interface IMessageContent

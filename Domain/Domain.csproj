@@ -48,9 +48,11 @@
     <Compile Include="Converters\ConvertData.cs" />
     <Compile Include="Converters\MessageEncryption.cs" />
     <Compile Include="Data\AllMessages.cs" />
+    <Compile Include="Data\ChatSwitch.cs" />
     <Compile Include="Data\CurrentPersonId.cs" />
     <Compile Include="Data\DisconnectContent.cs" />
     <Compile Include="Data\JsonContainer.cs" />
+    <Compile Include="Data\JsonMessageContainer.cs" />
     <Compile Include="Data\MessageContent.cs" />
     <Compile Include="Data\Person.cs" />
     <Compile Include="Data\SenderReceiver.cs" />
@@ -59,6 +61,8 @@
     <Compile Include="Data\UIViewModel.cs" />
     <Compile Include="Data\UsersOnline.cs" />
     <Compile Include="Data\ViewModelBase.cs" />
+    <Compile Include="Interfaces\IChatSwitch.cs" />
+    <Compile Include="Interfaces\IJsonMessageContainer.cs" />
     <Compile Include="Interfaces\Repository\IAdd.cs" />
     <Compile Include="Interfaces\IJsonContainer.cs" />
     <Compile Include="Interfaces\IMessageContent.cs" />

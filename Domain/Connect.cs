@@ -14,17 +14,22 @@ namespace Domain
         private IMessageContent _messageContent;
         private IPerson _person;
         private IJsonContainer _jsonContainer;
+        private IJsonMessageContainer _jsonMessageContainer;
+        private IChatSwitch _ChatSwitch;
         public IUIViewModel _uIViewModel;
         public static ManualResetEvent ReceiveDone = new ManualResetEvent(false);
         public bool FirstTime { get; set; }
 
         private bool NotLastRecursion { get; set; }
 
-        public Connect(int personId, IPerson person, IJsonContainer jsonContainer, IMessageContent messageContent, IUIViewModel uIViewModel)
+        public Connect(int personId, IChatSwitch chatSwitch, IPerson person,
+            IJsonContainer jsonContainer, IJsonMessageContainer jsonMessageContainer, IMessageContent messageContent, IUIViewModel uIViewModel)
         {
             _PersonId = personId;
             _person = person;
+            _ChatSwitch = chatSwitch;
             _jsonContainer = jsonContainer;
+            _jsonMessageContainer = jsonMessageContainer;
             _uIViewModel = uIViewModel;
         }
         public void ReadCallback(IAsyncResult ar)
@@ -123,32 +128,32 @@ namespace Domain
 
                 if (disconnectContent.ExitMessage != "€noc§dne§€")
                 {
-                    _messageContent = ConverData.ToReceiv<MessageContent>(textFromClient);
+                    _jsonMessageContainer = ConverData.ToReceiv<JsonMessageContainer>(textFromClient);
 
-                    string tempName = _messageContent.Name;
+                    string tempName = _jsonMessageContainer.Message.Name; 
 
-                    AllMessages.Messages.Add(_messageContent.NewInstance(_messageContent));
+                    AllMessages.Messages.Add(_jsonMessageContainer.Message.NewInstance(_jsonMessageContainer.Message));
 
                     AddToMessagesOnServer();
 
                     foreach (var item in UsersOnline.Persons)
                     {
-                        if (item.PersonId == _messageContent.Id)
+                        if (item.PersonId == _jsonMessageContainer.Message.Id)
                         {
-                            _messageContent.MessageAlignment = "Right";
-                            _messageContent.MessageColour = SenderReceiwer.SendBubbleColor;
-                            _messageContent.MessagePictureVisibility = "Hidden";
-                            _messageContent.Name = "";
+                            _jsonMessageContainer.Message.MessageAlignment = "Right";
+                            _jsonMessageContainer.Message.MessageColour = SenderReceiwer.SendBubbleColor;
+                            _jsonMessageContainer.Message.MessagePictureVisibility = "Hidden";
+                            _jsonMessageContainer.Message.Name = "";
                         }
                         else
                         {
-                            _messageContent.MessageAlignment = "Left";
-                            _messageContent.MessageColour = SenderReceiwer.ReceiveBubleColor;
-                            _messageContent.MessagePictureVisibility = "Visible";
-                            _messageContent.Name = tempName;
+                            _jsonMessageContainer.Message.MessageAlignment = "Left";
+                            _jsonMessageContainer.Message.MessageColour = SenderReceiwer.ReceiveBubleColor;
+                            _jsonMessageContainer.Message.MessagePictureVisibility = "Visible";
+                            _jsonMessageContainer.Message.Name = tempName;
                         }
 
-                        item.Connection.Send(ConverData.ToSend(_messageContent));
+                        item.Connection.Send(ConverData.ToSend(_jsonMessageContainer));
                     }
 
 
@@ -170,9 +175,9 @@ namespace Domain
         /// </summary>
         private void AddToMessagesOnServer()
         {
-            _uIViewModel.ChatMessages += _messageContent.Name + "\n" +
-               _messageContent.MessageText + "\n" +
-               _messageContent.MessageTime + "\n\n";
+            _uIViewModel.ChatMessages += _jsonMessageContainer.Message.Name + "\n" +
+               _jsonMessageContainer.Message.MessageText + "\n" +
+               _jsonMessageContainer.Message.MessageTime + "\n\n";
         }
 
         private void RemoveDisconnectedUser(DisconnectContent disconnectContent)

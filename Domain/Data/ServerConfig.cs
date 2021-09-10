@@ -50,17 +50,24 @@ namespace Domain.Data
             PersonId++;
 
             Person person = new Person();
+            ChatSwitch chatSwitch = new ChatSwitch();
 
             JsonContainer jsonContainer = new JsonContainer()
             {
                 CurrentPersonId = new CurrentPersonId(),
                 Messages = new System.Collections.ObjectModel.ObservableCollection<MessageContent>(),
-                Persons = new List<Person>()
+                Persons = new List<Person>(),
+            };
+
+            JsonMessageContainer jsonMessageContainer = new JsonMessageContainer()
+            {
+                Switch = new ChatSwitch(),
+                Message = new MessageContent()
             };
 
             MessageContent messageContent = new MessageContent();
 
-            Connect connect = new Connect(PersonId, person, jsonContainer, messageContent, _uIViewModel);
+            Connect connect = new Connect(PersonId, chatSwitch, person, jsonContainer, jsonMessageContainer, messageContent, _uIViewModel);
             connect.FirstTime = true;
 
             handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, SocketFlags.None, new AsyncCallback(connect.ReadCallback), state);

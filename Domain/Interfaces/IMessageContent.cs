@@ -1,5 +1,6 @@
 ﻿
 using Domain.Data;
+using System.Collections.Generic;
 
 namespace Domain.Interfaces
 {
@@ -21,7 +22,9 @@ namespace Domain.Interfaces
         byte[] Pic { get; set; }
 
         bool PictureChanged { get; set; }
-        int Id { get; set; }
+        string Id { get; set; }
+        List<string> IdList { get; set; }
+
 
         IMessageContent NewInstance(IMessageContent from);
     }

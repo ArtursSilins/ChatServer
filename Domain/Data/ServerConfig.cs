@@ -1,4 +1,5 @@
 ﻿using Domain;
+using Domain.Converters;
 using Domain.Data;
 using Domain.Interfaces;
 using System;
@@ -21,7 +22,7 @@ namespace Domain.Data
         public static ManualResetEvent ReadDone = new ManualResetEvent(false);
 
         public IUIViewModel _uIViewModel { get; set; }
-        int PersonId = 0;
+        string PersonId = "";
 
 
         public ServerConfig(IUIViewModel uIViewModel)
@@ -47,19 +48,20 @@ namespace Domain.Data
             StateObject state = new StateObject();
             state.workSocket = handler;
 
-            PersonId++;
+
+            PersonId = Guid.NewGuid().ToString();
 
             Person person = new Person();
             ChatSwitch chatSwitch = new ChatSwitch();
 
-            JsonContainer jsonContainer = new JsonContainer()
+            BaseContainer jsonContainer = new BaseContainer()
             {
-                CurrentPersonId = new CurrentPersonId(),
                 Messages = new System.Collections.ObjectModel.ObservableCollection<MessageContent>(),
                 Persons = new List<Person>(),
+                Credential = new Credential()
             };
 
-            JsonMessageContainer jsonMessageContainer = new JsonMessageContainer()
+            MessageContainer jsonMessageContainer = new MessageContainer()
             {
                 Switch = new ChatSwitch(),
                 Message = new MessageContent()
@@ -67,8 +69,13 @@ namespace Domain.Data
 
             MessageContent messageContent = new MessageContent();
 
-            Connect connect = new Connect(PersonId, chatSwitch, person, jsonContainer, jsonMessageContainer, messageContent, _uIViewModel);
+            Credential credential = new Credential();
+
+            Connect connect = new Connect(PersonId, chatSwitch, person,
+                jsonContainer, jsonMessageContainer, messageContent, _uIViewModel, credential);
+
             connect.FirstTime = true;
+            connect.FirstTimeConnect = true;
 
             handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, SocketFlags.None, new AsyncCallback(connect.ReadCallback), state);
             ReadDone.WaitOne();

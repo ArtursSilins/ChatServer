@@ -4,10 +4,11 @@ using System.Collections.ObjectModel;
 
 namespace Domain.Interfaces
 {
-    public interface IJsonContainer
+    public interface IJsonBaseContainer
     {
         ObservableCollection<MessageContent> Messages { get; set; }
         List<Person> Persons { get; set; }
-        CurrentPersonId CurrentPersonId { get; set; }
+        string CurrentPersonId { get; set; }
+        Credential Credential { get; set; }
     }
 }

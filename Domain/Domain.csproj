@@ -45,14 +45,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connect.cs" />
+    <Compile Include="Converters\AsymmetricEncryption.cs" />
     <Compile Include="Converters\ConvertData.cs" />
+    <Compile Include="Converters\Hash.cs" />
+    <Compile Include="Converters\KeySplitter.cs" />
     <Compile Include="Converters\MessageEncryption.cs" />
+    <Compile Include="Converters\SymmetricEncryption.cs" />
     <Compile Include="Data\AllMessages.cs" />
     <Compile Include="Data\ChatSwitch.cs" />
+    <Compile Include="Data\Credential.cs" />
     <Compile Include="Data\CurrentPersonId.cs" />
     <Compile Include="Data\DisconnectContent.cs" />
-    <Compile Include="Data\JsonContainer.cs" />
-    <Compile Include="Data\JsonMessageContainer.cs" />
+    <Compile Include="Data\JsonContainers\BaseContainer.cs" />
+    <Compile Include="Data\JsonContainers\MessageContainer.cs" />
+    <Compile Include="Data\JsonContainers\PublicKeyContainer.cs" />
+    <Compile Include="Data\KeyContainer\StoreAsymmetricKeys.cs" />
+    <Compile Include="Data\KeyContainer\UserKeys.cs" />
+    <Compile Include="Data\KeyContainer\KeyList.cs" />
     <Compile Include="Data\MessageContent.cs" />
     <Compile Include="Data\Person.cs" />
     <Compile Include="Data\SenderReceiver.cs" />
@@ -62,17 +71,33 @@
     <Compile Include="Data\UsersOnline.cs" />
     <Compile Include="Data\ViewModelBase.cs" />
     <Compile Include="Interfaces\IChatSwitch.cs" />
+    <Compile Include="Interfaces\ICredential.cs" />
     <Compile Include="Interfaces\IJsonMessageContainer.cs" />
-    <Compile Include="Interfaces\Repository\IAdd.cs" />
     <Compile Include="Interfaces\IJsonContainer.cs" />
     <Compile Include="Interfaces\IMessageContent.cs" />
     <Compile Include="Interfaces\IPerson.cs" />
     <Compile Include="Interfaces\IUIViewModel.cs" />
-    <Compile Include="Interfaces\Repository\IGet.cs" />
+    <Compile Include="Interfaces\Repository\IDBOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\DBOperations.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{09dab307-d5d6-4797-bf5a-6ff6f56cb885}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,6 +9,6 @@ namespace Domain.Data
     public class DisconnectContent
     {
         public string ExitMessage { get; set; }
-        public int Id { get; set; }
+        public string Id { get; set; }
     }
 }

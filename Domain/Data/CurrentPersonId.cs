@@ -8,6 +8,6 @@ namespace Domain.Data
 {
     public class CurrentPersonId
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
     }
 }

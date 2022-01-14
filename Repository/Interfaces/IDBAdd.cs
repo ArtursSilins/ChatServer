@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Interfaces.Repository
+namespace Repository.Interfaces
 {
-    interface IDBOperations
+    public interface IDBAdd
     {
     }
 }

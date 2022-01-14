@@ -1,6 +1,7 @@
 ﻿using Domain;
 using Domain.Converters;
 using Domain.Data;
+using Domain.Data.JsonContainers;
 using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -71,8 +72,13 @@ namespace Domain.Data
 
             Credential credential = new Credential();
 
+            CredentialConfirmation credentialConfirmation = new CredentialConfirmation();
+
+            CredentialCheck credentialCheck = new CredentialCheck();
+
             Connect connect = new Connect(PersonId, chatSwitch, person,
-                jsonContainer, jsonMessageContainer, messageContent, _uIViewModel, credential);
+                jsonContainer, jsonMessageContainer, messageContent,
+                _uIViewModel, credential, credentialConfirmation, credentialCheck);
 
             connect.FirstTime = true;
             connect.FirstTimeConnect = true;

@@ -42,4 +42,3 @@ C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\obj\D
 C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\obj\Debug\ChatServer.pdb
 C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\bin\Debug\ChatDB.mdf
 C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\bin\Debug\ChatDB_log.ldf
-C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\ChatServer\bin\Debug\Repository.dll.config

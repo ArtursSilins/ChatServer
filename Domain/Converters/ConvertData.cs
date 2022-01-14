@@ -17,10 +17,17 @@ namespace Domain.Converters
 
             return DataInBytes;
         }
-        
+        public static byte[] ToSend(object data, string personId)
+        {
+            string DataToSend = JsonConvert.SerializeObject(data);
+            byte[] DataInBytes = Encoding.UTF8.GetBytes(SymmetricEncryption.EncryptDataToBytes(DataToSend, personId));
+
+            return DataInBytes;
+        }
+
         public static T ToReceive<T>(string text, string personId)
         {
-            T objectFromText = JsonConvert.DeserializeObject<T>(SymmetricEncryption.Decrypt(text, personId)/*MessageEncryption.Decrypt(text)*/);
+            T objectFromText = JsonConvert.DeserializeObject<T>(SymmetricEncryption.Decrypt(text, personId));
 
             return objectFromText;
         }

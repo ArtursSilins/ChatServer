@@ -44,6 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChatDBDataSet.cs">
+      <DependentUpon>ChatDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ChatDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChatDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Connect.cs" />
     <Compile Include="Converters\AsymmetricEncryption.cs" />
     <Compile Include="Converters\ConvertData.cs" />
@@ -54,9 +62,11 @@
     <Compile Include="Data\AllMessages.cs" />
     <Compile Include="Data\ChatSwitch.cs" />
     <Compile Include="Data\Credential.cs" />
+    <Compile Include="Data\CredentialCheck.cs" />
     <Compile Include="Data\CurrentPersonId.cs" />
     <Compile Include="Data\DisconnectContent.cs" />
     <Compile Include="Data\JsonContainers\BaseContainer.cs" />
+    <Compile Include="Data\JsonContainers\CredentialConfirmation.cs" />
     <Compile Include="Data\JsonContainers\MessageContainer.cs" />
     <Compile Include="Data\JsonContainers\PublicKeyContainer.cs" />
     <Compile Include="Data\KeyContainer\StoreAsymmetricKeys.cs" />
@@ -70,34 +80,46 @@
     <Compile Include="Data\UIViewModel.cs" />
     <Compile Include="Data\UsersOnline.cs" />
     <Compile Include="Data\ViewModelBase.cs" />
+    <Compile Include="DateControl.cs" />
+    <Compile Include="DBOperations\DBAdd.cs" />
+    <Compile Include="DBOperations\DBCheck.cs" />
+    <Compile Include="DBOperations\DBGet.cs" />
+    <Compile Include="Interfaces\DBOperations\IDBAdd.cs" />
+    <Compile Include="Interfaces\DBOperations\IDBCheck.cs" />
+    <Compile Include="Interfaces\DBOperations\IDBGet.cs" />
     <Compile Include="Interfaces\IChatSwitch.cs" />
     <Compile Include="Interfaces\ICredential.cs" />
+    <Compile Include="Interfaces\ICredentialCheck.cs" />
+    <Compile Include="Interfaces\ICredentialConfirmation.cs" />
     <Compile Include="Interfaces\IJsonMessageContainer.cs" />
     <Compile Include="Interfaces\IJsonContainer.cs" />
     <Compile Include="Interfaces\IMessageContent.cs" />
     <Compile Include="Interfaces\IPerson.cs" />
     <Compile Include="Interfaces\IUIViewModel.cs" />
-    <Compile Include="Interfaces\Repository\IDBOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Repository\DBOperations.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ChatDBDataSet.xsc">
+      <DependentUpon>ChatDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ChatDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChatDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ChatDBDataSet.xss">
+      <DependentUpon>ChatDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Repository\Repository.csproj">
-      <Project>{09dab307-d5d6-4797-bf5a-6ff6f56cb885}</Project>
-      <Name>Repository</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

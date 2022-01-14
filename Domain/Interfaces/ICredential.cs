@@ -18,5 +18,7 @@ namespace Domain.Interfaces
         string IV { get; set; }
         string UserName { get; set; }
         string Password { get; set; }
+        string Email { get; set; }
+        int Sex { get; set; }
     }
 }

@@ -15,6 +15,9 @@ namespace ChatServer
 
             DataContext = new UIViewModel();
 
+            Domain.DBOperations.DBAdd.Add = new Repository.Add();
+            Domain.DBOperations.DBGet.Get = new Repository.Get();
+            Domain.DBOperations.DBCheck.Check = new Repository.Check();
         }
       
     }

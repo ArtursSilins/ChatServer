@@ -17,4 +17,8 @@ C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\obj\D
 C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\obj\Debug\Repository.pdb
 C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\bin\Debug\ChatDB.mdf
 C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\bin\Debug\ChatDB_log.ldf
-C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\bin\Debug\Repository.dll.config
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\bin\Debug\Domain.dll
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\bin\Debug\Newtonsoft.Json.dll
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\bin\Debug\Domain.pdb
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\bin\Debug\Newtonsoft.Json.xml
+C:\Users\artur\Documents\Visual Studio 2017\Projects\ChatServer\Repository\obj\Debug\Repository.csproj.CopyComplete

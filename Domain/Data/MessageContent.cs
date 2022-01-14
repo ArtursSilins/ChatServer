@@ -22,6 +22,9 @@ namespace Domain.Data
         public byte[] Pic { get; set; }
         public bool PictureChanged { get; set; }
         public string Id { get; set; }
+        /// <summary>
+        /// A list of people for whom the message is intended.
+        /// </summary>
         public List<string> IdList { get; set; }
 
 
